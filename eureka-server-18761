@@ -1,0 +1,14 @@
+server:
+  port: 18761
+
+spring:
+  application:
+    name: eureka-server
+eureka:
+  instance:
+    hostname: server.eureka.com
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://server.eureka.com:18762/eureka/ # 此处改为第二个eureka-server地址
